@@ -1,168 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Shandra Sabrina</title>
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            box-sizing: border-box;
+        /* Palet Warna Biru Langit Muda & Pink Soft */
+        :root {
+            --sky-blue-bg: #E3F2FD;    /* Biru Langit Sangat Muda */
+            --sky-blue-main: #81D4FA;  /* Biru Langit */
+            --soft-pink: #F8BBD0;      /* Pink Soft */
+            --deep-pink: #F06292;      /* Pink Penegas */
+            --text-color: #455A64;
         }
 
         body {
-            background: linear-gradient(135deg, #ffd6e8, #cce6ff);
-            padding: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--sky-blue-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
         }
 
-        .cv-container {
-            max-width: 900px;
-            margin: auto;
+        .cv-card {
             background: white;
-            display: flex;
+            width: 100%;
+            max-width: 800px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
-        .left {
-            width: 35%;
-            background: linear-gradient(180deg, #ff9acb, #7ab6ff);
+        /* Sisi Kiri */
+        .left-panel {
+            background-color: var(--sky-blue-main);
             color: white;
-            padding: 30px;
+            flex: 1;
+            min-width: 260px;
+            padding: 40px 20px;
             text-align: center;
         }
 
-        .photo-box {
-            width: 160px;
-            height: 160px;
-            margin: auto;
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border: 4px solid var(--soft-pink);
             border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
-            border: 5px solid white;
-            margin-bottom: 20px;
+            color: #ccc;
         }
 
-        .photo-box img {
+        .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .left h2 {
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid rgba(255,255,255,0.5);
-            padding-bottom: 5px;
+        .left-panel h2 { margin: 10px 0 5px; font-size: 1.4rem; }
+        .left-panel p { font-size: 0.9rem; margin-bottom: 30px; opacity: 0.9; }
+
+        .contact-box {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
         }
 
-        .left p {
-            margin: 6px 0;
-            font-size: 14px;
-        }
-
-        .right {
-            width: 65%;
+        /* Sisi Kanan */
+        .right-panel {
+            flex: 2;
+            min-width: 320px;
             padding: 40px;
         }
 
-        .right h1 {
-            color: #ff5fa2;
-            font-size: 32px;
-        }
-
-        .right h3 {
-            color: #4a90e2;
-            margin-bottom: 25px;
-        }
-
-        .section {
+        .section-title {
+            color: var(--deep-pink);
+            border-bottom: 3px solid var(--soft-pink);
+            display: inline-block;
             margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: bold;
         }
 
-        .section h2 {
-            color: #ff5fa2;
-            margin-bottom: 8px;
-            border-left: 5px solid #4a90e2;
-            padding-left: 10px;
+        .content-item {
+            margin-bottom: 15px;
         }
 
-        .section ul {
-            padding-left: 20px;
+        .year-tag {
+            background: var(--soft-pink);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 8px;
         }
 
-        .section ul li {
-            margin-bottom: 6px;
+        .skill-pill {
+            display: inline-block;
+            border: 2px solid var(--sky-blue-main);
+            color: var(--sky-blue-main);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 5px;
         }
+
+        ul { padding-left: 20px; margin-top: 5px; }
+        li { margin-bottom: 8px; font-size: 0.95rem; }
+
     </style>
 </head>
-
 <body>
 
-<div class="cv-container">
-    <div class="left">
-        <div class="photo-box">
-            <!-- Ganti foto.jpg dengan foto kamu -->
-            <img src="foto.jpg" alt="Foto Shandra">
+<div class="cv-card">
+    <div class="left-panel">
+        <div class="photo-frame">
+            <img src="d0635e56-84d2-4cdc-8921-598f68980b05.jpeg" alt="Foto Shandra Sabrina">
+        </div>
+        <h2>Shandra Sabrina</h2>
+        <p>Tahun Lahir: 2007</p>
+
+        <div class="contact-box">
+            <strong>📍 Alamat:</strong><br>
+            Bojongsoang Griya Bandung Asri 1<br><br>
+            <strong>📞 Telepon:</strong><br>
+            085703209061<br><br>
+            <strong>📸 Instagram:</strong><br>
+            mattchaltve0<br><br>
+            <strong>🗣 Bahasa:</strong><br>
+            Indonesia
         </div>
 
-        <h2>Kontak</h2>
-        <p>📞 085703209061</p>
-        <p>📍 Bojongsoang Griya Bandung Asri 1</p>
-        <p>📱 @mattchaltve0</p>
-
-        <h2>Bahasa</h2>
-        <p>Bahasa Indonesia</p>
+        <div style="margin-top: 30px;">
+            <div class="section-title" style="color: white; border-color: white;">Hobby</div>
+            <p>Menonton</p>
+        </div>
     </div>
 
-    <div class="right">
-        <img src="foto-kamu.jpg" alt="Foto Profil" width="150" style="border-radius: 10px; margin-bottom: 10px;">
-        <h1>Shandra Sabrina Indah Putri</h1>
-        <h3>Curriculum Vitae</h3>
-
-        <div class="section">
-            <h2>Data Diri</h2>
-            <p><b>Tahun Lahir:</b> 2007</p>
-            <p><b>Hobi:</b> Menonton</p>
+    <div class="right-panel">
+        
+        <div class="content-item">
+            <div class="section-title">Pendidikan</div>
+            <div><span class="year-tag">2023 - 2026</span> SMA (Lulus 2026)</div>
+            <div style="margin-top: 8px;"><span class="year-tag">2019 - 2023</span> SMP (Lulus 2023)</div>
+            <div style="margin-top: 8px;"><span class="year-tag">Lulus 2019</span> SD</div>
         </div>
 
-        <div class="section">
-            <h2>Pendidikan</h2>
+        <div class="content-item" style="margin-top: 30px;">
+            <div class="section-title">Keahlian</div><br>
+            <div class="skill-pill">Menyanyi</div>
+        </div>
+
+        <div class="content-item" style="margin-top: 30px;">
+            <div class="section-title">Pengalaman Organisasi</div>
             <ul>
-                <li>SD – Lulus 2016</li>
-                <li>SMP – Lulus 2023</li>
-                <li>SMA – Lulus 2026</li>
+                <li><strong>SMA:</strong> Aktif Berorganisasi (Lulus 2026)</li>
+                <li><strong>SMP:</strong> Aktif Berorganisasi (Lulus 2023)</li>
+                <li><strong>SD:</strong> Aktif Berorganisasi (Lulus 2019)</li>
             </ul>
         </div>
 
-        <div class="section">
-            <h2>Pengalaman Organisasi</h2>
+        <div class="content-item" style="margin-top: 30px;">
+            <div class="section-title">Sertifikat</div>
             <ul>
-                <li>SMP – Pramuka (2016)</li>
-                <li>SMA – Sadawana (2026)</li>
+                <li><span class="year-tag">2026</span> Lomba Lintas Alam (SMA)</li>
+                <li><span class="year-tag">2023</span> Sertifikat Pramuka (SMP)</li>
             </ul>
         </div>
 
-        <div class="section">
-            <h2>Sertifikat</h2>
-            <ul>
-                <li>Mengaji</li>
-                <li>Pasukan Baris Berbaris</li>
-                <li>Lomba Lintas Alam</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Keahlian</h2>
-            <p>— (bisa ditambahkan)</p>
-        </div>
     </div>
 </div>
+
 </body>
 </html>
